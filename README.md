@@ -1,5 +1,5 @@
 <h2>ReactJS User Interface of Features Accross Projects (Headless) Application for keeping records of features developed in projects of an Organisation.</h2>
-<h4>git repo of the backend application - https://github.com/Kazitanvirazad/FeaturesAccrossProjects-SpringBoot.git </h4>
+<h4>git repo of the SpringBoot backend application - https://github.com/Kazitanvirazad/FeaturesAccrossProjects-SpringBoot.git </h4>
 
 <h4>Benefits of Application - </h4>
 <ol>
