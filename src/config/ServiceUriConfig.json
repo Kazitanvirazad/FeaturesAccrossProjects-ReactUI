@@ -1,0 +1,26 @@
+{
+    "ProjectList": {
+        "uri": "project/getprojects",
+        "method": "GET"
+    },
+    "SearchFeature": {
+        "uri": "featureprojects/search",
+        "method": "GET"
+    },
+    "AddProject": {
+        "uri": "project/addproject",
+        "method": "POST"
+    },
+    "AddFeature": {
+        "uri": "feature/addfeature",
+        "method": "POST"
+    },
+    "FeatureList": {
+        "uri": "featureprojects/getfeatureprojects",
+        "method": "GET"
+    },
+    "DropdownList": {
+        "uri": "data/forminputdata",
+        "method": "GET"
+    }
+}
