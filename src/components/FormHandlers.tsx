@@ -46,43 +46,28 @@ export const handleCheckBoxInput = (event: any) => {
     requestData[name] = name in requestData && requestData[name] ? false : true;
 };
 
-// const clearForm = (id: string) => {
-//     const navigate = useNavigate();
-//     // let ele: HTMLCollectionOf<Element> = document.getElementsByClassName("form-control")!;
-//     // for (let i = 0; i < ele.length; i++) {
-//     //     console.log(ele[i].nodeValue);
-//     //     // ele.innerText = "";
-//     // }
-//     // <Route path="/redirect" element={<Navigate <FormSubmissionPage submissionText={id} /> /> } />
-//     navigate("/submitted");
-// };
-
 export const onFormSubmit = (event: any) => {
     event.preventDefault();
-    console.log("form submit");
-    const navigate = useNavigate();
-    navigate("/submitted");
-    // clearForm("Kazi success");
-    // fetch(serviceConfig.url, {
-    //     method: serviceConfig.method,
-    //     headers: {
-    //         "Content-Type": "application/json",
-    //         "Accept": "application/json",
-    //     },
-    //     body: JSON.stringify(requestData)
-    // }).then(response => {
-    //     return response.json();
-    // }).then(data => {
-    //     if (data) {
-    //         alert(data.message);
-    //         if (!data.error) {
-    //             clearForm(event.target.id);
-    //         }
-    //     } else {
-    //         alert("Server Connection problem!");
-    //     }
-    // }).catch(err => {
-    //     console.log(err);
-    //     alert("Server Error!");
-    // });
+    fetch(serviceConfig.url, {
+        method: serviceConfig.method,
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify(requestData)
+    }).then(response => {
+        return response.json();
+    }).then(data => {
+        if (data) {
+            alert(data.message);
+            if (!data.error) {
+                window.location.href = "/submitted?message=" + data.message;
+            }
+        } else {
+            alert("Server Connection problem!");
+        }
+    }).catch(err => {
+        console.log(err);
+        alert("Server Error!");
+    });
 };
