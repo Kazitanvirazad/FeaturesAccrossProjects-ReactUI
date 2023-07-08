@@ -19,7 +19,7 @@ const AddProjectFormPage = () => {
         { isSelectTag: true, isMulti: false, name: "Project Contact Point", option: "projectContactPoint", id: "project_contact_point" }
     ];
 
-    let serviceCnnfig = {
+    let serviceConfig = {
         uri: ServiceUriConfig.AddProject.uri,
         url: import.meta.env.VITE_API_SERVICE_URL + ServiceUriConfig.AddProject.uri,
         method: ServiceUriConfig.AddProject.method,
@@ -31,7 +31,7 @@ const AddProjectFormPage = () => {
         <>
             <div className="container">
                 <CommonHeader heading="Add Project Form" />
-                <AddProjectForm formAttributeData={formData} serviceCnnfig={serviceCnnfig} />
+                <AddProjectForm formAttributeData={formData} serviceConfig={serviceConfig} />
             </div>
         </>
     );

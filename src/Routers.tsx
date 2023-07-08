@@ -18,6 +18,7 @@ const Routers = () => {
         createRoutesFromElements(
             <>
                 <Route path="/" element={<Home />} />
+                <Route path="/*" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/addprojectform" element={<AddProjectFormPage />} />
                 <Route path="/addfeatureform" element={<AddFeatureFormPage />} />

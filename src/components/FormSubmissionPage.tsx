@@ -1,15 +1,14 @@
 import Buttons from './Buttons';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const FormSubmissionPage = () => {
+    const location = useLocation();
     document.title = 'Submitted';
-
-    const [searchParams] = useSearchParams();
 
     return (
         <>
             <div className="container">
-                <div><p className="display-5 align-middle">{searchParams.get('message')}</p></div>
+                <div><p className="display-5 align-middle">{location.state.message}</p></div>
                 <Buttons />
             </div>
         </>
